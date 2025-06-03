@@ -12,64 +12,70 @@ from datetime import datetime
 import cv2
 import logging
 import torch.nn as nn
-logging.getLogger('torch').setLevel(logging.ERROR)
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Define router
 router = APIRouter()
 
 # Model path and images folder
-model_path = os.path.join(os.path.dirname(__file__), '..', 'efficientnetb3_70k_model.pt')
+model_path = os.path.join(os.path.dirname(__file__), '..', 'efficientnetb3_70k_v2_model.pt')
 images_folder = os.path.join(os.path.dirname(__file__), '..', "mnt/image-contents")
 # Create images folder if it doesn't exist
 
 # Load model
 try:
-    # Initialize EfficientNetB3 with custom classifier
-    model = models.efficientnet_b3(weights=None)  # Avoid deprecation warning
-    model.classifier = nn.Sequential(
-        nn.Dropout(p=0.4),              # Standard EfficientNetB3 dropout
-        nn.Linear(1536, 128),           # Matches classifier.1
-        nn.SiLU(),                      # Common activation
-        nn.Dropout(p=0.4),              # Additional dropout
-        nn.Linear(128, 10)              # Matches classifier.4, outputs 10 classes
+    # Define the model architecture
+    model = models.efficientnet_b3(weights=None)
+    model.classifier = torch.nn.Sequential(
+        torch.nn.Dropout(p=0.4),
+        torch.nn.Linear(1536, 128),
+        torch.nn.SiLU(),
+        torch.nn.Dropout(p=0.4),
+        torch.nn.Linear(128, 11),
     )
-    state_dict = torch.load(model_path, map_location=torch.device('cpu'))
+
+    # Load the state dictionary
+    state_dict = torch.load(model_path, map_location=torch.device("cpu"))
     model.load_state_dict(state_dict)
     model.eval()
-    print("Loaded as PyTorch model")
+    logger.info("Model loaded successfully.")
+
 except Exception as e:
-    raise ValueError(f"Cannot load model: {e}")
+    logger.error(f"Failed to load model: {e}")
+    raise
 
-# Class labels dictionary
 class_names = {
-    0: 'Adults',
-    1: 'Culture',
-    2: 'Entertainment',
-    3: 'Environment',
-    4: 'Gambling',
-    5: 'Political',
-    6: 'Product',
-    7: 'Sports',
-    8: 'Technology',
-    9: 'Violence'
+    0: "Adults",
+    1: "Culture",
+    2: "Entertainment",
+    3: "Environment",
+    4: "Gambling",
+    5: "Political",
+    6: "Product",
+    7: "Social",
+    8: "Sports",
+    9: "Technology",
+    10: "Violence",
 }
 
-# Unsafe labels
 UNSAFE_LABELS = {
-    'Adults': 'adult',
-    'Gambling': 'gambling',
-    'Political': 'political',
-    'Violence': 'violence',
+    "Adults": "Adult",
+    "Political": "Political",
+    "Violence": "Violence",
+    "Gambling": "Gambling",
 }
 
-# Safe labels
 SAFE_LABELS = {
-    'Culture': 'culture',
-    'Entertainment': 'entertainment',
-    'Environment': 'environment',
-    'Product': 'product',
-    'Sports': 'sports',
-    'Technology': 'technology'
+    "Culture": "Culture",
+    "Entertainment": "Entertainment",
+    "Environment": "Environment",
+    "Product": "Product",
+    "Sports": "Sports",
+    "Social": "Social",
+    "Technology": "Technology",
 }
 
 # Combine SAFE and UNSAFE labels for mapping

@@ -14,7 +14,7 @@ logging.getLogger('torch').setLevel(logging.ERROR)
 router = APIRouter()
 
 # Video and frames folder
-videos_folder = os.path.join(os.path.dirname(__file__), '..', "mnt/video-contents")
+videos_folder = os.path.join(os.path.dirname(__file__), '..', r"C:\Users\soe\Downloads\test video")
 
 # Unsafe labels
 UNSAFE_LABELS = {
@@ -26,12 +26,13 @@ UNSAFE_LABELS = {
 
 # Safe labels
 SAFE_LABELS = {
-    'Culture': 'culture',
-    'Entertainment': 'entertainment',
-    'Environment': 'environment',
-    'Product': 'product',
-    'Sports': 'sports',
-    'Technology': 'technology'
+    "Culture": "Culture",
+    "Entertainment": "Entertainment",
+    "Environment": "Environment",
+    "Product": "Product",
+    "Sports": "Sports",
+    "Social": "Social",
+    "Technology": "Technology",
 }
 
 # Pydantic model for JSON input
