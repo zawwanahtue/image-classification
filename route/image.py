@@ -18,8 +18,8 @@ logging.getLogger('torch').setLevel(logging.ERROR)
 router = APIRouter()
 
 # Model path and images folder
-model_path = os.path.join(os.path.dirname(__file__), '..', 'efficientnetb3_70k_model.pt')
-images_folder = os.path.join(os.path.dirname(__file__), '..', "mnt/image-contents")
+model_path = os.path.join(os.path.dirname(__file__), '..', 'efficientnetb3_70k_v2_model.pt')
+images_folder = os.path.join(os.path.dirname(__file__), '..', r"C:\Users\User\Desktop\Exter")
 # Create images folder if it doesn't exist
 
 # Load model
@@ -31,7 +31,7 @@ try:
         nn.Linear(1536, 128),           # Matches classifier.1
         nn.SiLU(),                      # Common activation
         nn.Dropout(p=0.4),              # Additional dropout
-        nn.Linear(128, 10)              # Matches classifier.4, outputs 10 classes
+        nn.Linear(128, 11)              # Matches classifier.4, outputs 10 classes
     )
     state_dict = torch.load(model_path, map_location=torch.device('cpu'))
     model.load_state_dict(state_dict)
@@ -49,9 +49,10 @@ class_names = {
     4: 'Gambling',
     5: 'Political',
     6: 'Product',
-    7: 'Sports',
-    8: 'Technology',
-    9: 'Violence'
+    7: 'Social',
+    8: 'Sports',
+    9: 'Technology',
+    10: 'Violence'
 }
 
 # Unsafe labels
@@ -68,6 +69,7 @@ SAFE_LABELS = {
     'Entertainment': 'entertainment',
     'Environment': 'environment',
     'Product': 'product',
+    'Social': 'social',
     'Sports': 'sports',
     'Technology': 'technology'
 }

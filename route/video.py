@@ -14,7 +14,7 @@ logging.getLogger('torch').setLevel(logging.ERROR)
 router = APIRouter()
 
 # Video and frames folder
-videos_folder = os.path.join(os.path.dirname(__file__), '..', "mnt/video-contents")
+videos_folder = os.path.join(os.path.dirname(__file__), '..', r"C:\Users\User\Desktop\Exter")
 
 # Unsafe labels
 UNSAFE_LABELS = {
@@ -30,6 +30,7 @@ SAFE_LABELS = {
     'Entertainment': 'entertainment',
     'Environment': 'environment',
     'Product': 'product',
+     'Social': 'social',
     'Sports': 'sports',
     'Technology': 'technology'
 }
@@ -57,7 +58,7 @@ def extract_frames_and_analyze(fileName: str) -> dict:
 
         for file in os.listdir(directory):
             if file.lower().startswith(base_filename.lower()):
-                if any(file.lower().endswith(ext) for ext in ['.mp4', '.avi', '.mov', '.mkv']):
+                if any(file.lower().endswith(ext) for ext in ['.mp4']):
                     actual_filename = file
                     break
 
