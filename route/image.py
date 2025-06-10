@@ -25,6 +25,9 @@ model_path = os.path.join(os.path.dirname(__file__), '..', 'efficientnetb3_70k_v
 images_folder = os.path.join(os.path.dirname(__file__), '..', "mnt/image-contents")
 # Create images folder if it doesn't exist
 
+# Determine device (GPU if available, else CPU)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 # Load model
 try:
     # Define the model architecture
@@ -38,10 +41,11 @@ try:
     )
 
     # Load the state dictionary
-    state_dict = torch.load(model_path, map_location=torch.device("cpu"))
+    state_dict = torch.load(model_path, map_location=device)
     model.load_state_dict(state_dict)
+    model.to(device)  # Move model to the selected device
     model.eval()
-    logger.info("Model loaded successfully.")
+    logger.info(f"Model loaded successfully on {device}.")
 
 except Exception as e:
     logger.error(f"Failed to load model: {e}")
@@ -110,7 +114,7 @@ def predict_img(fileName: str, image_bytes: bytes = None):
             transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
         ])
 
-        image = transform(image).unsqueeze(0)
+        image = transform(image).unsqueeze(0).to(device)  # Move tensor to device
 
         with torch.no_grad():
             preds = model(image)
