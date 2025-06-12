@@ -1,0 +1,228 @@
+Filename: 92b17e2a-d370-40cc-99d9-6b7919db2855
+Timestamp: 2025-06-12 08:42:39
+API Timestamp: 2025-06-12 08:42:39
+Message: Successfully classified video
+Response: {
+  "filename": "92b17e2a-d370-40cc-99d9-6b7919db2855",
+  "is_safe": false,
+  "content_type": [
+    "Adult"
+  ]
+}
+--------------------------------------------------
+Filename: ac504643-967b-47a8-93e6-2cd1371f65c3
+Timestamp: 2025-06-12 08:42:47
+API Timestamp: 2025-06-12 08:42:47
+Message: Successfully classified video
+Response: {
+  "filename": "ac504643-967b-47a8-93e6-2cd1371f65c3",
+  "is_safe": false,
+  "content_type": [
+    "Adult"
+  ]
+}
+--------------------------------------------------
+Filename: 943a63d9-1e33-4e11-ad37-d8d23d8ea03d
+Timestamp: 2025-06-12 08:43:01
+API Timestamp: 2025-06-12 08:43:01
+Message: Successfully classified video
+Response: {
+  "filename": "943a63d9-1e33-4e11-ad37-d8d23d8ea03d",
+  "is_safe": false,
+  "content_type": [
+    "Adult"
+  ]
+}
+--------------------------------------------------
+Filename: 2df6f39f-d12e-43cc-a9d6-53675c18682b
+Timestamp: 2025-06-12 08:43:45
+API Timestamp: 2025-06-12 08:43:45
+Message: Successfully classified video
+Response: {
+  "filename": "2df6f39f-d12e-43cc-a9d6-53675c18682b",
+  "is_safe": false,
+  "content_type": [
+    "Adult"
+  ]
+}
+--------------------------------------------------
+Filename: 3754c87a-3ddd-4adf-b57b-108b9101587d
+Timestamp: 2025-06-12 08:43:51
+API Timestamp: 2025-06-12 08:43:51
+Message: Successfully classified video
+Response: {
+  "filename": "3754c87a-3ddd-4adf-b57b-108b9101587d",
+  "is_safe": true,
+  "content_type": [
+    "Social"
+  ]
+}
+--------------------------------------------------
+Filename: 21a681c7-6c69-4e5c-84ae-2ec0256178a8
+Timestamp: 2025-06-12 08:45:52
+API Timestamp: 2025-06-12 08:45:52
+Message: Successfully classified video
+Response: {
+  "filename": "21a681c7-6c69-4e5c-84ae-2ec0256178a8",
+  "is_safe": false,
+  "content_type": [
+    "Violence"
+  ]
+}
+--------------------------------------------------
+Filename: 400cf17b-77b4-4f45-b2d7-cd9f797b6b43
+Timestamp: 2025-06-12 08:48:59
+API Timestamp: 2025-06-12 08:48:59
+Message: Successfully classified video
+Response: {
+  "filename": "400cf17b-77b4-4f45-b2d7-cd9f797b6b43",
+  "is_safe": false,
+  "content_type": [
+    "Adult"
+  ]
+}
+--------------------------------------------------
+Filename: d7fceed8-2cdd-4d19-a8d2-ced2371abb95
+Timestamp: 2025-06-12 08:49:41
+API Timestamp: 2025-06-12 08:49:41
+Message: Successfully classified video
+Response: {
+  "filename": "d7fceed8-2cdd-4d19-a8d2-ced2371abb95",
+  "is_safe": false,
+  "content_type": [
+    "Adult"
+  ]
+}
+--------------------------------------------------
+Filename: bf3033f5-80fc-47e1-9d9e-844e66dfd88a
+Timestamp: 2025-06-12 08:55:48
+API Timestamp: 2025-06-12 08:55:48
+Message: Successfully classified video
+Response: {
+  "filename": "bf3033f5-80fc-47e1-9d9e-844e66dfd88a",
+  "is_safe": true,
+  "content_type": [
+    "Entertainment"
+  ]
+}
+--------------------------------------------------
+Filename: 2632a3f9-3379-4517-9265-8b4d14e7665f
+Timestamp: 2025-06-12 08:57:12
+API Timestamp: 2025-06-12 08:57:12
+Message: Successfully classified video
+Response: {
+  "filename": "2632a3f9-3379-4517-9265-8b4d14e7665f",
+  "is_safe": false,
+  "content_type": [
+    "Violence"
+  ]
+}
+--------------------------------------------------
+Filename: 16299d58-c383-422f-bb0b-d087377027bc
+Timestamp: 2025-06-12 08:57:25
+API Timestamp: 2025-06-12 08:57:25
+Message: Successfully classified video
+Response: {
+  "filename": "16299d58-c383-422f-bb0b-d087377027bc",
+  "is_safe": false,
+  "content_type": [
+    "Violence"
+  ]
+}
+--------------------------------------------------
+Filename: c4a7b3d5-df0a-4575-a298-0af5e91cefd5
+Timestamp: 2025-06-12 09:02:52
+API Timestamp: 2025-06-12 09:02:52
+Message: Successfully classified video
+Response: {
+  "filename": "c4a7b3d5-df0a-4575-a298-0af5e91cefd5",
+  "is_safe": true,
+  "content_type": [
+    "Entertainment"
+  ]
+}
+--------------------------------------------------
+Filename: 5a89868e-6a1e-44c1-a7d9-3d157a1e36ba
+Timestamp: 2025-06-12 09:02:58
+API Timestamp: 2025-06-12 09:02:58
+Message: Successfully classified video
+Response: {
+  "filename": "5a89868e-6a1e-44c1-a7d9-3d157a1e36ba",
+  "is_safe": false,
+  "content_type": [
+    "Violence"
+  ]
+}
+--------------------------------------------------
+Filename: a0de5067-bc87-416f-8863-79a96de0a550
+Timestamp: 2025-06-12 09:03:35
+API Timestamp: 2025-06-12 09:03:35
+Message: Successfully classified video
+Response: {
+  "filename": "a0de5067-bc87-416f-8863-79a96de0a550",
+  "is_safe": false,
+  "content_type": [
+    "Violence"
+  ]
+}
+--------------------------------------------------
+Filename: 582fbd14-6762-4a54-8ab3-b56a1627280e
+Timestamp: 2025-06-12 09:04:02
+API Timestamp: 2025-06-12 09:04:02
+Message: Successfully classified video
+Response: {
+  "filename": "582fbd14-6762-4a54-8ab3-b56a1627280e",
+  "is_safe": false,
+  "content_type": [
+    "Violence"
+  ]
+}
+--------------------------------------------------
+Filename: c024c104-7e11-4285-a22a-39248063b5e9
+Timestamp: 2025-06-12 09:04:29
+API Timestamp: 2025-06-12 09:04:29
+Message: Successfully classified video
+Response: {
+  "filename": "c024c104-7e11-4285-a22a-39248063b5e9",
+  "is_safe": false,
+  "content_type": [
+    "Violence"
+  ]
+}
+--------------------------------------------------
+Filename: 0f2f061e-c9dd-4103-9081-467f535edd19
+Timestamp: 2025-06-12 09:18:42
+API Timestamp: 2025-06-12 09:18:42
+Message: Successfully classified video
+Response: {
+  "filename": "0f2f061e-c9dd-4103-9081-467f535edd19",
+  "is_safe": true,
+  "content_type": [
+    "Entertainment"
+  ]
+}
+--------------------------------------------------
+Filename: 631ba6f4-7b91-44c1-8e29-b88ad8d0d6a2
+Timestamp: 2025-06-12 09:23:02
+API Timestamp: 2025-06-12 09:23:02
+Message: Successfully classified video
+Response: {
+  "filename": "631ba6f4-7b91-44c1-8e29-b88ad8d0d6a2",
+  "is_safe": true,
+  "content_type": [
+    "Social"
+  ]
+}
+--------------------------------------------------
+Filename: 1c27d88f-9435-40ec-a413-0fbb6baf9870
+Timestamp: 2025-06-12 09:38:25
+API Timestamp: 2025-06-12 09:38:25
+Message: Successfully classified video
+Response: {
+  "filename": "1c27d88f-9435-40ec-a413-0fbb6baf9870",
+  "is_safe": false,
+  "content_type": [
+    "Political"
+  ]
+}
+--------------------------------------------------
